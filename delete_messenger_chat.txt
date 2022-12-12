@@ -1,0 +1,32 @@
+
+const sleep = (time) => {
+  return new Promise((resolve) => setTimeout(resolve, time))
+}
+
+const doSomething = async () => {
+var el = document.querySelectorAll('div[aria-label="Chats"] div.x1n2onr6>div').length;
+
+for(var i=0;i<el;i++){
+var wrap = document.querySelector('div[aria-label="Chats"] div.x1n2onr6>div>div>div div[role="gridcell"]+div[role="gridcell"] div[role="button"]');
+if(wrap){
+	wrap.click();
+}
+} //end for
+
+await sleep(500); 
+var wrap1 = document.querySelector('div.__fb-dark-mode div[role="menu"] hr+div+div+div');
+if(wrap1){
+wrap1.click();
+}
+
+await sleep(1000);
+var wrap2 = document.querySelector('div[role="dialog"] div+div+div+div>div>div+div span');
+if(wrap2){
+wrap2.click();
+}
+
+
+} //end async
+
+doSomething();
+
